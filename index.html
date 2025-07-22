@@ -1,66 +1,70 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Connexion - Espace Élèves</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: #42a5f5;
+      background-image: url('https://i.imgur.com/38Y7xND.png'); /* image type carte vacances */
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: 40%;
       display: flex;
+      justify-content: flex-end;
       align-items: center;
-      justify-content: center;
       height: 100vh;
     }
 
-    .login-container {
+    .login-box {
       background: #fff;
       border-radius: 10px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-      width: 360px;
       padding: 30px;
-      text-align: center;
+      width: 350px;
+      margin-right: 60px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     }
 
-    .login-container h2 {
-      margin-top: 0;
+    .login-box h2 {
+      margin: 0;
+      margin-bottom: 10px;
       font-weight: normal;
-      color: #444;
+      font-size: 22px;
+      color: #333;
+      text-align: center;
     }
 
     .avatar {
       width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      margin-bottom: 15px;
+      display: block;
+      margin: 15px auto;
     }
 
     .input-group {
-      text-align: left;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
-    .input-group label {
+    label {
       display: block;
       font-size: 14px;
-      color: #333;
       margin-bottom: 5px;
+      color: #444;
     }
 
-    .input-group input {
+    input {
       width: 100%;
       padding: 10px;
-      font-size: 15px;
+      font-size: 14px;
       border: 1px solid #ccc;
-      border-radius: 6px;
-      box-sizing: border-box;
+      border-radius: 5px;
     }
 
-    .btn-login {
+    button {
+      width: 100%;
       background-color: #e0e0e0;
       border: none;
-      width: 100%;
       padding: 12px;
       border-radius: 6px;
       font-size: 16px;
@@ -68,34 +72,32 @@
       cursor: pointer;
     }
 
-    .btn-login:hover {
+    button:hover {
       background-color: #d5d5d5;
-    }
-
-    #error-message {
-      color: red;
-      font-size: 14px;
-      margin-top: 10px;
-      display: none;
-    }
-
-    .logo {
-      width: 60px;
-      margin-bottom: 10px;
     }
 
     small {
       display: block;
+      text-align: right;
+      font-size: 12px;
+      color: #888;
       margin-bottom: 15px;
-      color: #666;
+    }
+
+    #error-message {
+      color: red;
+      font-size: 13px;
+      display: none;
+      text-align: center;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
-  <div class="login-container">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Pronote_icon.svg/512px-Pronote_icon.svg.png" alt="Logo" class="logo">
+
+  <div class="login-box">
     <h2>Espace Élèves</h2>
-    <img src="https://cdn-icons-png.flaticon.com/512/147/147144.png" class="avatar" alt="avatar élève">
+    <img src="https://cdn-icons-png.flaticon.com/512/147/147144.png" alt="Avatar" class="avatar">
     <small>* champs obligatoires</small>
     <form id="loginForm">
       <div class="input-group">
@@ -108,7 +110,7 @@
         <input type="password" id="password" name="password" placeholder="Saisissez votre mot de passe" required>
       </div>
 
-      <button type="submit" class="btn-login">Se connecter</button>
+      <button type="submit">Se connecter</button>
     </form>
     <p id="error-message">Identifiants incorrects</p>
   </div>
@@ -131,5 +133,6 @@
       }
     });
   </script>
+
 </body>
 </html>
